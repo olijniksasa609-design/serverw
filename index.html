@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polyana Visuals</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#05070d;
+    color:white;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 50px;
+    background:rgba(5,7,13,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#3b82f6;
+}
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+button,a{
+    border:none;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.functions-btn{
+    background:transparent;
+    color:white;
+    border:1px solid rgba(255,255,255,.15);
+    padding:12px 25px;
+    border-radius:12px;
+}
+
+.download-btn{
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#3b82f6;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:90px;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:#3b82f6;
+}
+
+.hero p{
+    color:#9ca3af;
+    margin-top:15px;
+    font-size:20px;
+}
+
+.download-main{
+    margin-top:35px;
+    padding:18px 45px;
+    background:#2563eb;
+    color:white;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.download-main:hover{
+    background:#3b82f6;
+}
+
+.menu{
+    position:fixed;
+    top:90px;
+    right:50px;
+    width:300px;
+    background:#0f172a;
+    border:1px solid rgba(59,130,246,.3);
+    border-radius:20px;
+    padding:20px;
+    display:none;
+    box-shadow:0 0 30px rgba(59,130,246,.25);
+}
+
+.menu.active{
+    display:block;
+}
+
+.menu h2{
+    margin-bottom:15px;
+    color:#3b82f6;
+}
+
+.feature{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+.feature:last-child{
+    margin-bottom:0;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    color:#6b7280;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        POLYANA <span>VISUALS</span>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="functions-btn" onclick="toggleMenu()">
+            FUNCTIONS
+        </button>
+
+        <a href="#" class="download-btn">
+            DOWNLOAD
+        </a>
+    </div>
+</nav>
+
+<div class="menu" id="menu">
+    <h2>Functions</h2>
+
+    <div class="feature">
+        ✅ ESP
+    </div>
+
+    <div class="feature">
+        ✅ Aspect Ratio
+    </div>
+
+    <div class="feature">
+        🔜 More Features Soon...
+    </div>
+</div>
+
+<section class="hero">
+    <h1>POLYANA <span>VISUALS</span></h1>
+
+    <p>
+        First Release • Version 1.0
+    </p>
+
+    <p>
+        Modern Minecraft Visual Experience
+    </p>
+
+    <a href="#" class="download-main">
+        DOWNLOAD NOW
+    </a>
+</section>
+
+<div class="footer">
+    © 2026 Polyana Visuals. All rights reserved.
+</div>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
